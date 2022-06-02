@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>User list</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>名前</th>
+            <th>メールアドレス</th>
+            <th>年齢</th>
+            <th>更新</th>
+            <th>削除</th>
+        </tr>
+        <% mydata.forEach(function (value) { %>
+        <tr>
+            <td><%= value.id %></td>
+            <td><%= value.name %></td>
+            <td><%= value.mail %></td>
+            <td><%= value.age %></td>
+            <td><a href="/edit/<%= value.id %>">更新</a></td>
+            <td><a href="/delete/<%= value.id %>">削除</a></td>
+        </tr>
+        <% }); %>
+    </table>
+
+    <p><a href="/create">新規登録</a></p>
+</body>
+</html>

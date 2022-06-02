@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>User Edit</title>
+</head>
+<body>
+    <h1>更新フォーム</h1>
+    <form action="/update/<%= mydata[0].id %>" method="POST">
+        name <input type="text" name="name" value="<%= mydata[0].name %>"><br>
+        mail <input type="text" name="mail" value="<%= mydata[0].mail %>"><br>
+        age <input type="text" name="age" value="<%= mydata[0].age %>"><br>
+        <button type="submit">更新</button>
+    </form>    
+</body>
+</html>
